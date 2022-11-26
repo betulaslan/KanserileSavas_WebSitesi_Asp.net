@@ -1,0 +1,45 @@
+﻿@model EntityLayer.Concrete.AnaSayfa
+
+@{
+    ViewData["Title"] = "UpdateAnaSayfa";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Haber Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="AnaSayfaID" />
+    <div class="form-group">
+        @Html.Label("Başlık")
+        <input type="text" asp-for="Baslik" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Resim 1")
+        <input type="text" asp-for="Resim" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Başlık")
+        <input type="text" asp-for="Description" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama 1")
+        <input type="text" style=" word-wrap:normal;" asp-for="Detay1" class="form-control" /><br />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Açıklama 2")
+        <input type="text" asp-for="Detay2" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Resim 2")
+        <input type="text" asp-for="Resim2" class="form-control" />
+    </div>
+    <br />
+
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+

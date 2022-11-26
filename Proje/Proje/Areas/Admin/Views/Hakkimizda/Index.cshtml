@@ -1,0 +1,26 @@
+﻿@using EntityLayer.Concrete
+@model List<Hakkimizda>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hakkımızda Düzenleme</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Açıklama</th>
+        <th>Adres</th>
+        <th>Telefon Numarası</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Aciklama</td>
+            <td>@item.Adres</td>
+            <td>@item.TelNo</td>
+            <td><a href="/Admin/Hakkimizda/UpdateHakkimizda/@item.HakkimizdaID" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+

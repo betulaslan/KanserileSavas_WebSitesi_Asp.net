@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Hakkimizda
+
+@{
+    ViewData["Title"] = "UpdateHakkimizda";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hakkımızda Güncelleme</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="HakkimizdaID" />
+    <div class="form-group">
+        @Html.Label("Açıklama")
+        <input type="text" asp-for="Aciklama" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Adres")
+        <input type="text" asp-for="Adres" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Telefon Numarası")
+        <input type="text" asp-for="TelNo" class="form-control" />
+    </div>
+    <br />
+
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+

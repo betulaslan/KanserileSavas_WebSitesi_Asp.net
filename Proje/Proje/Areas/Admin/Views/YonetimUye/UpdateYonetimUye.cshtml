@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.YonetimUye
+
+@{
+    ViewData["Title"] = "UpdateYonetimUye";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h1>Haber Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="YonetimUyeID" />
+    <div class="form-group">
+        @Html.Label("Başlık")
+        <input type="text" asp-for="AdSoyad" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Resim")
+        <input type="text" asp-for="Resim" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Description")
+        <input type="text" asp-for="Aciklama" class="form-control" />
+    </div>
+    
+    <br />
+
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>
+
